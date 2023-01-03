@@ -16,5 +16,5 @@ void print_diagsums(int *a, int size)
 
 	for (n = size - 1; n <= (size * size) - size; n = n + size - 1)
 			total2 = total2 + a[n];
-	printf("%d, %d\n", total1, total2;
+	printf("%d, %d\n", total1, total2);
 }
