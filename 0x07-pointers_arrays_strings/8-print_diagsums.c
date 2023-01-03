@@ -7,7 +7,7 @@
  * @size: input
  * Return: Always 0 (Success)
  */
-void print_diagsum(int *a, int size)
+void print_diagsums(int *a, int size)
 {
 	int i, n, total1 = 0, total2 = 0;
 
