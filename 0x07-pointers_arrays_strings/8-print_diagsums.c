@@ -15,6 +15,6 @@ void print_diagsum(int *a, int size)
 		totall = totall + a[i];
 
 	for (n = size - 1; n <= (size * size) - size; n = n + size - 1
-			total2 = total2 + a[n]
-		printf("%d, %d\n", totall, total2;
+			total2 = total2 + a[n];
+	printf("%d, %d\n", totall, total2;
 }
