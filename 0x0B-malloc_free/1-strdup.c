@@ -1,6 +1,16 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+
+/**
+ * _strdup - rturns
+ * space
+ * passed
+ * @str: pointer
+ *
+ * Return: NULL
+ * pointer
+ * NULL
+ */
 
 char *_strdup(char *str)
 {
