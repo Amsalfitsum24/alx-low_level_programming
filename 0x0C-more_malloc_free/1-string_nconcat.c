@@ -1,51 +1,45 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * string_nconcat - ...
- * @s1: ...
- * @s2: ...
- * @n: ...
- *
- * Return: ...
+ * string_nconcat - Concatenate the 2nd string to the 1st string up to n bytes
+ * @s1: Destination string
+ * @s2: String to be merged with
+ * @n: Number of bytes
+ * Return: Pointer to first index of the concatenated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, j = 0, k = 0, l = 0;
-	char *str;
+	unsigned int i, j, k;
+	char *ptr = NULL;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	while (s1[i])
-		i++;
-	while (s2[k])
-		k++;
+	for (i = 0; s1[i] != '\0'; i++)
+		;
 
-	if (n >= k)
-		1 = i + k;
-	else
-		1 = i + n;
+	for (j = 0; s2[j] != '\0'; j++)
+		;
 
-	str = malloc(sizeof(char) *1 + 1);
-	if (str == NULL)
+	if (j <= n)
+		n = j;
+
+	ptr = malloc((i + n + 1) * sizeof(char));
+
+	if (ptr == NULL)
 		return (NULL);
 
-	k = 0;
-	while (j < 1)
-	{
-		if (j <= i)
-			str[j] = s1[j];
+	for (k = 0; s1[k] != '\0'; k++)
+		ptr[k] = s1[k];
 
-		if (j >= i)
-		{
-			str[j] = s2[k];
-			k++;
-		}
-		j++;
-	}
-	str[j] = '/0';
-	return (str);
+	for (k = 0; k < n; k++)
+		ptr[k + i] = s2[k];
+
+	ptr[k + i] = '\0';
+
+	return (ptr);
 }
