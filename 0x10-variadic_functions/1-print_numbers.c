@@ -3,7 +3,6 @@
 #include <stdio.h>
 
 /**
- *
  * print_numbers - Entry Point
  *
  * @separator: comma space
