@@ -2,8 +2,8 @@
 #define MAIN_H
 
 #include <fcntl.h>
-#include <stdio.h>
-#include <stdliB>
+#include <sys/types.h>
+#include <sys/stat.h>
 #include <unistd.h>
 
 int _putchar(char c);
